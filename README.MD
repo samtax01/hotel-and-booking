@@ -48,18 +48,18 @@ The command to run the seeder file is:
 ### API Endpoints
 
 Get Nearby Hotels
-- Endpoint [GET] ```http://localhost:3000/hotels/search```
-- Example http://localhost:3000/hotels/search?coordinates=48.130323,11.576362&limit=10&lang=en
+- Endpoint [GET] ```https://nearby-hotel.herokuapp.com/hotels/search```
+- Example https://nearby-hotel.herokuapp.com/hotels/search?coordinates=48.130323,11.576362&limit=10&lang=en
 
 
 View all saved hotel
-- Endpoint [GET] ```http://localhost:3000/hotels```
+- Endpoint [GET] ```https://nearby-hotel.herokuapp.com/hotels```
 
 Book Hotel
-- Endpoint [POST] ```http://localhost:3000/hotels/booking```
+- Endpoint [POST] ```https://nearby-hotel.herokuapp.com/hotels/booking```
 
 View all Booked information on a Hotel
-- Endpoint [GET] ```http://localhost:3000/hotels/booking/:hotelId```
+- Endpoint [GET] ```https://nearby-hotel.herokuapp.com/hotels/booking/:hotelId```
 
 Documentation endpoint
-``http://localhost:3000/docs``
+``https://nearby-hotel.herokuapp.com/docs``

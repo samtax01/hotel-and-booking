@@ -1,7 +1,9 @@
 const _ = require('lodash');
-const mongoose = require('mongoose');
 const HotelRepository = require('./HotelRepository');
 const {pagination, page} = require('../utils/helpers');
+const mongoose = require('mongoose');
+const book = require('../models/booking');
+const hotel = require('../models/hotel');
 
 class BookingRepository {
 

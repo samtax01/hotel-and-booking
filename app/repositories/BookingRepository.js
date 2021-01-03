@@ -13,6 +13,9 @@ class BookingRepository {
     }
 
     async createBooking(data) {
+        let hotelInfo = await this.hotelModel.findOne({hotelId: data.hotel}).exec();
+        if(!hotelInfo)
+            throw new Error(`Hotel ID ${data.hotel} not found in the system. Please only book hotel with a valid ID. Run 'fetch nearby hotel endpoint' to pick a valid hotel ID`);
         return await this.bookingModel.create([data]);
     }
 
@@ -24,6 +27,8 @@ class BookingRepository {
      */
     async getHotelBooking(hotelId = null) {
         let hotelInfo = await this.hotelModel.findOne({hotelId}).exec();
+        if(!hotelInfo)
+            throw new Error(`Hotel with id ${hotelId} not found in the system. Please only book hotel with a valid ID`);
         let customers = (await this.bookingModel.find({hotel: hotelId}).sort({createdAt: -1}).exec());
         return {
             hotelInfo,

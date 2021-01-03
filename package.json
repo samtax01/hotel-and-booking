@@ -1,0 +1,54 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "Backend API",
+  "main": "app.js",
+  "apidoc": {
+    "name": "api-doc",
+    "version": "1.0.0",
+    "description": "API docs",
+    "title": "API docs",
+    "url": "http://localhost:8090/api/v1"
+  },
+  "scripts": {
+    "docs": "apidoc -i . -o apidoc/ -e node_modules/",
+    "seed": "md-seed run -d",
+    "start": "nodemon app"
+  },
+  "keywords": [
+    "api",
+    "visiondev",
+    "restful"
+  ],
+  "author": "Samson Oyetola",
+  "license": "ISC",
+  "dependencies": {
+    "@sentry/node": "^5.27.0",
+    "@sentry/tracing": "^5.27.0",
+    "aws-sdk": "^2.785.0",
+    "axios": "^0.20.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "joi": "^14.3.1",
+    "jwt-simple": "^0.5.6",
+    "lodash": "^4.17.20",
+    "md5": "^2.3.0",
+    "mongodb": "^3.6.2",
+    "mongoose": "^5.10.7",
+    "mongoose-data-seed": "^2.1.6",
+    "mongoose-delete": "^0.5.2",
+    "mongoose-unique-validator": "^2.0.3",
+    "nodemon": "^2.0.4",
+    "passport": "^0.4.1",
+    "passport-http-bearer": "^1.0.1",
+    "passport-local": "^1.0.0",
+    "uuidv4": "^6.2.3"
+  },
+  "mdSeed": {
+    "seedersFolder": "./app/seeders/api/v1"
+  }
+}

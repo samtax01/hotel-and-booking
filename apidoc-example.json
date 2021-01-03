@@ -1,0 +1,7 @@
+{
+  "name": "api-doc-example",
+  "version": "1.0.0",
+  "description": "API docs",
+  "title": "API docs",
+  "url" : "http://localhost:8090/api/v1"
+}

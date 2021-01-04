@@ -12,6 +12,11 @@ class BookingRepository {
         this.bookingModel = mongoose.model('Booking');
     }
 
+    /**
+     * Book an Hotel
+     * @param data
+     * @returns {Promise<*>}
+     */
     async createBooking(data) {
         let hotelInfo = await this.hotelModel.findOne({hotelId: data.hotel}).exec();
         if(!hotelInfo)

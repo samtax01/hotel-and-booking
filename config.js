@@ -3,7 +3,7 @@ require("dotenv").config({silent: true});
 
 
 module.exports = {
-    port: process.env.PORT || 3000,
+    port: process.env.PORT || 4000,
     env: process.env.NODE_ENV || "development",
     mongoURI: process.env.MONGO_URI || "mongodb://localhost:27017/sample_api_db",
     secretKey: process.env.SECRET_KEY || '_secret_key_',

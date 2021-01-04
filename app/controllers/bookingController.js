@@ -69,8 +69,8 @@ let ApiResponse = require("../utils/ApiResponse");
  *
  */
 exports.createBooking = async (request, response) => {
-    const {FormattedError, NormalizedValue} = hotelBookingCreateFormValidation.validate(request.body);
     try {
+        const {FormattedError, NormalizedValue} = hotelBookingCreateFormValidation.validate(request.body);
         return FormattedError?
             response.status(responseCode.UNPROCESSABLE_ENTITY).json(ApiResponse.falseMessage(FormattedError)):
             response.json(
@@ -162,9 +162,9 @@ exports.createBooking = async (request, response) => {
     }
  *
  */
-exports.getHotelBooking = async (request, response) => {
-    const {FormattedError, NormalizedValue} = hotelBookingGetFormValidation.validate(request.params);
+exports.getHotelBooking = async (request, response) => {;
     try {
+        const {FormattedError, NormalizedValue} = hotelBookingGetFormValidation.validate(request.params)
         return FormattedError?
             response.status(responseCode.UNPROCESSABLE_ENTITY).json(ApiResponse.falseMessage(FormattedError)):
             response.json(

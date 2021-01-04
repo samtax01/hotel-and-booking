@@ -106,8 +106,8 @@ exports.getHotels = async (request, response) => {
  *
  */
 exports.getNearByHotel = async (request, response) => {
-    const {FormattedError, NormalizedValue} = hotelSearchFormValidation.validate(request.query);
     try {
+        const {FormattedError, NormalizedValue} = hotelSearchFormValidation.validate(request.query);
         return FormattedError?
             response.status(responseCode.UNPROCESSABLE_ENTITY).json( ApiResponse.falseMessage(FormattedError)):
             response.json(
